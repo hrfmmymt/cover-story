@@ -51,6 +51,9 @@ module.exports = [
           ]
         }
       }),
+      new webpack.DefinePlugin({
+        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+      }),
       new webpack.optimize.UglifyJsPlugin({
         minimize: true,
         sourceMap: false,
@@ -122,6 +125,9 @@ module.exports = [
             require('postcss-nested')()
           ]
         }
+      }),
+      new webpack.DefinePlugin({
+        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
       }),
       new webpack.optimize.UglifyJsPlugin({
         minimize: true,
