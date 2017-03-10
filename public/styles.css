@@ -19,7 +19,7 @@ p {
   min-height: 100%;
   width: auto;
   height: auto;
-  z-index: -100;
+  z-index: -1;
   transform: translateX(-50%) translateY(-50%);
   /*background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;*/
   background-size: cover;
@@ -37,5 +37,5 @@ p {
 }
 
 .home h2 {
-  color: blue;
+  color: red;
 }
