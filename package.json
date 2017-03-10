@@ -4,9 +4,9 @@
   "license": "ISC",
   "scripts": {
     "start": "webpack --config ./webpack/webpack.dev.config.js && node ./dist/server.js",
-    "build": "NODE_ENV=production webpack -p --config ./webpack/webpack.prod.config.js",
+    "build": "NODE_ENV=production webpack --config ./webpack/webpack.prod.config.js",
     "lint:js": "eslint src",
-    "heroku-postbuild": "NODE_ENV=production webpack -p --config ./webpack/webpack.prod.config.js"
+    "heroku-postbuild": "NODE_ENV=production webpack --config ./webpack/webpack.prod.config.js"
   },
   "dependencies": {
     "autoprefixer": "^6.5.1",
@@ -25,6 +25,7 @@
     "express": "^4.14.0",
     "extract-text-webpack-plugin": "^2.1.0",
     "json-loader": "^0.5.4",
+    "license-webpack-plugin": "^0.4.2",
     "postcss-custom-properties": "^5.0.2",
     "postcss-import": "^9.1.0",
     "postcss-loader": "^1.0.0",

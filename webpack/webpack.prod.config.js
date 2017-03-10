@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const LicenseWebpackPlugin = require('license-webpack-plugin')
 const extractCSS = new ExtractTextPlugin('styles.css')
 
 module.exports = [
@@ -49,6 +50,20 @@ module.exports = [
             require('postcss-nested')()
           ]
         }
+      }),
+      new webpack.optimize.UglifyJsPlugin({
+        minimize: true,
+        sourceMap: false,
+        compressor: {
+          warnings: false
+        },
+        output: {
+          comments: false
+        }
+      }),
+      new LicenseWebpackPlugin({
+        pattern: /^(.*)$/,
+        filename: 'licenses.txt'
       })
     ]
   },
@@ -107,6 +122,20 @@ module.exports = [
             require('postcss-nested')()
           ]
         }
+      }),
+      new webpack.optimize.UglifyJsPlugin({
+        minimize: true,
+        sourceMap: false,
+        compressor: {
+          warnings: false
+        },
+        output: {
+          comments: false
+        }
+      }),
+      new LicenseWebpackPlugin({
+        pattern: /^(.*)$/,
+        filename: 'licenses.txt'
       })
     ]
   }
