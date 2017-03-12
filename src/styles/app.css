@@ -12,6 +12,7 @@ p {
 }
 
 .first {
+  height: 100vh;
   & video {
     position: fixed;
     top: 50%;
@@ -31,6 +32,42 @@ p {
   }
 }
 
+.tween-one {
+  width: 100%;
+  opacity: 0;
+  color: #fff;
+  font-size: 32px;
+  padding-top: 160px;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.demo {
+  margin: 0 auto;
+  width: 600px;
+  height: 80px;
+  background-color: #133252;
+  margin-bottom: 30px;
+  border-radius: 4px;
+}
+
+.demo2 {
+  margin: 0 auto;
+  width: 600px;
+  height: 80px;
+  background-color: #E1FF9A;
+  margin-top: 30px;
+  border-radius: 4px;
+}
+
+.parallax-shape {
+  line-height: 120px;
+  width: 120px;
+  height: 120px;
+  text-align: center;
+  font-size: 24px;
+}
+
 .second {
   &__text {
     max-width: 38em;
@@ -42,5 +79,11 @@ p {
 .home {
   & h2 {
     color: red;
+  }
+}
+
+.last {
+  &__inner {
+    width: 100vw;
   }
 }

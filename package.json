@@ -1,7 +1,7 @@
 {
   "name": "react-redux-ssr",
   "private": true,
-  "license": "ISC",
+  "license": "MIT",
   "scripts": {
     "start": "node ./dist/server.js",
     "dev": "webpack --watch --config ./webpack/webpack.dev.config.js & node ./dist/server.js",
@@ -32,6 +32,7 @@
     "postcss-import": "^9.1.0",
     "postcss-loader": "^1.0.0",
     "postcss-nested": "^1.0.0",
+    "rc-scroll-anim": "^0.6.5",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.3",
