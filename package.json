@@ -7,7 +7,7 @@
     "dev": "webpack --watch --config ./webpack/webpack.dev.config.js & node ./dist/server.js",
     "build": "NODE_ENV=production webpack --config ./webpack/webpack.prod.config.js",
     "lint:js": "eslint src",
-    "heroku-prebuild": "NODE_ENV=production webpack --config ./webpack/webpack.prod.config.js"
+    "heroku-postbuild": "NODE_ENV=production webpack --config ./webpack/webpack.prod.config.js"
   },
   "dependencies": {
     "autoprefixer": "^6.5.1",
