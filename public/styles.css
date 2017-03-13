@@ -11,6 +11,29 @@ p {
   width: 100vw;
 }
 
+.static {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  background-color: #f2f3ef;
+  min-height: 350px;
+}
+
+.static h1 {
+  color: #444;
+  opacity: 0;
+  transform: scale(2);
+  transition: all 500ms ease;
+}
+
+.static h1.onScreen {
+  transform: scale(1);
+  opacity: 1;
+}
+
 .first {
   height: 100vh;
 }

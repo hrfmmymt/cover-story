@@ -47,24 +47,30 @@ export default class Article extends React.Component {
     }
   }
 
+  componentDidMount() {
+    const resizeBanner = () => {
+      const coverHeight = window.innerHeight * 0.80
+      document.getElementById('head').setAttribute('style', 'height: ' + Math.floor(coverHeight) + 'px;')
+      document.body.setAttribute('style', 'min-height: ' + Math.floor(coverHeight * 2) + 'px;')
+    }
+    window.onresize = () => {
+      if (window.innerWidth < 768) return
+      resizeBanner()
+    }
+    resizeBanner()
+
+    document.querySelector('h1').classList.add('onScreen')
+  }
+
   render() {
     return (
       <div className="home">
-        <h2>This page is /</h2>
-
         {
         /****
          Static view
         ****/ }
-        <div className="pack-page page0 ">
-          <div className="home-title">
-            <div className="page-title">
-              <p>Title 1</p>
-            </div>
-            <div className="page-description" key="c">
-              <p>The parallax demo</p>
-            </div>
-          </div>
+        <div id="head" className="static">
+          <h1>hrfmmymt</h1>
         </div>
 
         {
@@ -205,7 +211,7 @@ export default class Article extends React.Component {
             style={{ transform: 'translateY(420px) scale(.8)', color: '#fff' }}
           >
             <img
-              src="https://os.alipayobjects.com/rmsportal/CrVCkwvtTQQvQHL.png"
+              src="//os.alipayobjects.com/rmsportal/CrVCkwvtTQQvQHL.png"
               style={{ width: 100 }}
             />
           </ScrollParallax>
@@ -214,7 +220,7 @@ export default class Article extends React.Component {
             style={{ transform: 'translateY(380px) scale(.9)', color: '#fff' }}
           >
             <img
-              src="https://os.alipayobjects.com/rmsportal/sfmdyWNlweIvfUh.png"
+              src="//os.alipayobjects.com/rmsportal/sfmdyWNlweIvfUh.png"
               style={{ width: 150 }}
             />
           </ScrollParallax>
@@ -223,7 +229,7 @@ export default class Article extends React.Component {
             style={{ transform: 'translateY(320px)', color: '#fff' }}
           >
             <img
-              src="https://os.alipayobjects.com/rmsportal/sfmdyWNlweIvfUh.png"
+              src="//os.alipayobjects.com/rmsportal/sfmdyWNlweIvfUh.png"
               style={{ width: 200 }}
             />
           </ScrollParallax>
