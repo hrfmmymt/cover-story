@@ -2,9 +2,21 @@ html,
 body,
 div,
 h1,
-p {
+p,
+ul,
+li {
   margin: 0;
   padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 .container {
@@ -19,42 +31,42 @@ p {
   -ms-flex-pack: center;
       justify-content: center;
   background-color: #f2f3ef;
+}
+
+.static.header {
   min-height: 350px;
 }
 
-.static h1 {
+.static.header h1 {
   color: #444;
   opacity: 0;
   transform: scale(2);
   transition: all 500ms ease;
 }
 
-.static h1.onScreen {
+.static.header h1.onScreen {
   transform: scale(1);
   opacity: 1;
 }
 
-.first {
-  height: 100vh;
+.static.nav {
+  list-style-type: none;
+  -ms-flex-flow: row;
+  flex-flow: row;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100vw;
 }
 
-.first video {
+.static.nav li {
+  padding: 1rem 2rem;
+}
+
+.static.nav.sticked {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -1;
-  transform: translateX(-50%) translateY(-50%);
-  /*background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;*/
-  background-size: cover;
-  transition: 1s opacity;
-}
-
-.first .stopfade {
-  opacity: .5;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 
 .tween-one {
@@ -80,27 +92,17 @@ p {
   margin: 0 auto;
   width: 600px;
   height: 80px;
-  background-color: #E1FF9A;
+  background-color: #e1ff9a;
   margin-top: 30px;
   border-radius: 4px;
 }
 
-.parallax-shape {
+.career__prllx {
   line-height: 120px;
   width: 120px;
   height: 120px;
   text-align: center;
   font-size: 24px;
-}
-
-.second__text {
-  max-width: 38em;
-  margin: 0 auto;
-  font-family: "Tiempos",Georgia,serif;
-}
-
-.home h2 {
-  color: red;
 }
 
 .last__inner {

@@ -21963,8 +21963,8 @@ var HTML = function HTML(_ref) {
     _react2.default.createElement(
       'head',
       null,
-      _react2.default.createElement('meta', { charset: 'utf-8' }),
-      _react2.default.createElement('meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no' }),
+      _react2.default.createElement('meta', { charSet: 'utf-8' }),
+      _react2.default.createElement('meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }),
       _react2.default.createElement(
         'title',
         null,
@@ -22178,6 +22178,32 @@ var Article = function (_React$Component) {
       resizeBanner();
 
       document.querySelector('h1').classList.add('onScreen');
+
+      var u = document.querySelector;
+
+      var stickWithPositionFixed = true;
+      if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+        stickWithPositionFixed = false;
+        var stickyElements = document.getElementsByClassName('sticky');
+        for (var i = stickyElements.length - 1; i >= 0; i--) {
+          Stickyfill.add(stickyElements[i]);
+        }
+      }
+
+      var handleHeader = function handleHeader() {
+        var scrolled = window.scrollY;
+        if (stickWithPositionFixed) {
+          if (scrolled > document.getElementById('head').offsetHeight) {
+            document.getElementById('nav').classList.add('sticked');
+          } else {
+            document.getElementById('nav').classList.remove('sticked');
+          }
+        }
+      };
+      window.addEventListener('scroll', function (e) {
+        handleHeader();
+      });
+      handleHeader();
     }
   }, {
     key: 'render',
@@ -22189,7 +22215,7 @@ var Article = function (_React$Component) {
         { className: 'home' },
         _react2.default.createElement(
           'div',
-          { id: 'head', className: 'static' },
+          { id: 'head', className: 'static header' },
           _react2.default.createElement(
             'h1',
             null,
@@ -22197,14 +22223,85 @@ var Article = function (_React$Component) {
           )
         ),
         _react2.default.createElement(
+          'ul',
+          { id: 'nav', className: 'static nav' },
+          _react2.default.createElement(
+            'li',
+            null,
+            _react2.default.createElement(
+              'a',
+              { href: '' },
+              'career'
+            )
+          ),
+          _react2.default.createElement(
+            'li',
+            null,
+            _react2.default.createElement(
+              'a',
+              { href: '' },
+              'about'
+            )
+          )
+        ),
+        _react2.default.createElement(
           'div',
           {
-            className: 'pack-page',
+            className: 'scrll career',
             style: {
-              backgroundColor: '#174270',
+              backgroundColor: '#fefcf9',
               position: 'relative',
               overflow: 'hidden',
-              height: 1600
+              height: '100vh'
+            }
+          },
+          _react2.default.createElement(
+            ScrollParallax,
+            {
+              animation: { rotate: 360 },
+              style: { transform: 'rotate(0)' },
+              className: 'career__prllx is-rotate'
+            },
+            '\u3050\u308B\u3050\u308B'
+          ),
+          _react2.default.createElement(
+            ScrollParallax,
+            {
+              animation: { x: 0, opacity: 1 },
+              style: {
+                transform: 'translateX(-200px)',
+                opacity: 0,
+                backgroundColor: '#133252',
+                color: '#fff'
+              },
+              className: 'career__prllx is-trnsx'
+            },
+            '\u30B9\u30C3'
+          ),
+          _react2.default.createElement(
+            ScrollParallax,
+            {
+              animation: [{ opacity: 1, playScale: [0, 0.2] }, { blur: '0px', backgroundColor: '#F38EAD', playScale: [0, 0.2] }, {
+                translateX: -100,
+                boxShadow: '5px 5px 5px #000',
+                color: '#fff000',
+                playScale: [0, 0.2]
+              }, { translateX: 100, playScale: [0, 0.2] }, { translateX: 0, playScale: [0, 0.2] }],
+              style: { filter: 'blur(10px)', transform: 'translateX(0px)', opacity: 0, color: '#fff' },
+              className: 'career__prllx is-trnsxy'
+            },
+            '\u30D8\u30A4\u30D8\u30A4'
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          {
+            className: 'scrll',
+            style: {
+              backgroundColor: '#fefcf9',
+              position: 'relative',
+              overflow: 'hidden',
+              height: '100vh'
             }
           },
           _react2.default.createElement(
@@ -22231,7 +22328,7 @@ var Article = function (_React$Component) {
             {
               animation: { scaleX: 1, scaleY: 1 },
               style: { transform: 'scale(0)', color: '#fff' },
-              className: 'demo parallax-shape'
+              className: 'demo career__prllx'
             },
             '\u30C9\u30FC\u30F3'
           ),
@@ -22240,7 +22337,7 @@ var Article = function (_React$Component) {
             {
               animation: { rotate: 360 },
               style: { transform: 'rotate(0)' },
-              className: 'demo2 parallax-shape'
+              className: 'demo2 career__prllx'
             },
             '\u3050\u308B\u3050\u308B'
           ),
@@ -22254,7 +22351,7 @@ var Article = function (_React$Component) {
                 backgroundColor: '#133252',
                 color: '#fff'
               },
-              className: 'demo2 parallax-shape'
+              className: 'demo2 career__prllx'
             },
             '\u30B9\u30C3'
           ),
@@ -22263,7 +22360,7 @@ var Article = function (_React$Component) {
             {
               animation: { rotateY: 360 },
               style: { transform: 'perspective(100px) rotateY(0)', backgroundColor: '#0098CE' },
-              className: 'demo2 parallax-shape'
+              className: 'demo2 career__prllx'
             },
             '\u30D2\u30E5\u30F3'
           ),
@@ -22281,7 +22378,7 @@ var Article = function (_React$Component) {
             {
               animation: { blur: '0px', playScale: [0.5, 0.8], opacity: 1 },
               style: { filter: 'blur(20px)', opacity: 0, color: '#fff' },
-              className: 'demo parallax-shape'
+              className: 'demo career__prllx'
             },
             '\u30E2\u30E4\u30A2'
           ),
@@ -22290,7 +22387,7 @@ var Article = function (_React$Component) {
             {
               animation: { color: '#fff000', backgroundColor: '#F38EAD', playScale: [0.3, 0.8] },
               style: { filter: 'blur(0px)', color: '#fff' },
-              className: 'demo parallax-shape'
+              className: 'demo career__prllx'
             },
             '\u5909\u8272'
           ),
@@ -22313,14 +22410,14 @@ var Article = function (_React$Component) {
                 playScale: [0, 0.2]
               }, { translateX: 100, playScale: [0, 0.2] }, { translateX: 0, playScale: [0, 0.2] }],
               style: { filter: 'blur(10px)', transform: 'translateX(0px)', opacity: 0, color: '#fff' },
-              className: 'demo parallax-shape'
+              className: 'demo career__prllx'
             },
             '\u30D8\u30A4\u30D8\u30A4'
           )
         ),
         _react2.default.createElement(
           'div',
-          { className: 'pack-page',
+          { className: 'scrll',
             style: {
               backgroundColor: '#0097D0',
               position: 'relative',
@@ -22329,8 +22426,8 @@ var Article = function (_React$Component) {
             }
           },
           _react2.default.createElement(
-            'div',
-            { className: 'page2-title' },
+            'h2',
+            { className: 'scrll__title' },
             'Title 2'
           ),
           _react2.default.createElement(
@@ -22377,7 +22474,7 @@ var Article = function (_React$Component) {
           _react2.default.createElement(
             ScrollParallax,
             _defineProperty({
-              className: 'pack-page',
+              className: 'scrll',
               location: 'Scroll-Pack',
               animation: {
                 backgroundColor: '#0097D0',
@@ -22420,7 +22517,11 @@ var Article = function (_React$Component) {
                   textAlign: 'center'
                 }
               },
-              'Title 3'
+              _react2.default.createElement(
+                'h2',
+                { className: 'scrll__title' },
+                'Title 3'
+              )
             )
           )
         )
