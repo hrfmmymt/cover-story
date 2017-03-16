@@ -59,7 +59,7 @@ html {
       position: fixed;
       top: 0;
       left: 0;
-      z-index: 2;
+      z-index: 3;
     }
   }
 }
@@ -104,6 +104,13 @@ html {
   &__inner {
     width: 100vw;
   }
+}
+
+.career {
+  background-color: #fefcf9;
+  position: relative;
+  overflow: hidden;
+  padding-top: 3rem;
 }
 
 .career__wrapper {
@@ -153,7 +160,7 @@ html {
       display: block;
       float: right;
       margin-right: 2.1875rem;
-      font-size: 4.125rem;
+      font-size: 5.125rem;
     }
   }
 
@@ -238,6 +245,7 @@ html {
   & article .content img.right {
     margin: 0 0 .625rem .625rem;
     float: right;
+    max-width: 400px;
   }
 
   & article .content img.left {

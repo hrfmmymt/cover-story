@@ -61,16 +61,7 @@ export default class Article extends React.Component {
 
     document.querySelector('h1').classList.add('onScreen')
 
-    const u = document.querySelector;
-
     let stickWithPositionFixed = true
-    if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
-      stickWithPositionFixed = false
-      const stickyElements = document.getElementsByClassName('sticky')
-      for (let i = stickyElements.length - 1; i >= 0; i--) {
-        Stickyfill.add(stickyElements[i])
-      }
-    }
 
     const handleHeader = () => {
       const scrolled = window.scrollY
@@ -114,132 +105,169 @@ export default class Article extends React.Component {
         <div
           className="scrll career"
           style={{
-            backgroundColor: '#fefcf9',
-            position: 'relative',
-            overflow: 'hidden',
             height: ''
           }}
         >
 
-          <header>
-            <div className="category"><span>Lorem ipsum dolor sit amet, consectetur</span></div>
-            <i className="fa fa-arrow-left fa-3x" />
-          </header>
           <div className="career__wrapper">
 
             <aside>
+              { /* wide screen */ }
               <div className="chapter">
                 <h1>2014</h1>
               </div>
             </aside>
             <article>
+              { /* narrow screen */ }
               <div className="chapter">
                 <h1>2014</h1>
               </div>
-              <h2 className="title">Lorem ipsum dolor robero, <br />sit maime error illum ullam aspernatur</h2>
-              <div className="cover-img"><img src="https://unsplash.it/640/330" alt="cover image" /></div>
-              <div className="content first">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime error illum, eum placeat quae molestias repudiandae ipsa odit, ab incidunt molestiae, repellendus quam perspiciatis laborum praesentium id doloremque nostrum sit cum fugit. Vero incidunt
-                  iste ipsam, explicabo illum libero, enim ullam tenetur id, quaerat sapiente.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt ratione asperiores, quam labore ullam dolore a neque molestiae! Facere atque nobis voluptas! Blanditiis tempora adipisci quis nemo expedita voluptate a aspernatur suscipit reiciendis nesciunt possimus illum, assumenda sequi eius voluptas neque! Libero, laborum quos ut corporis totam ducimus magnam quasi, quod pariatur distinctio, alias commodi enim dolores earum obcaecati! Numquam.</p>
 
-                <ul>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum eveniet dolor sequi accusantium, voluptatum mollitia, dolores voluptates omnis officia praesentium veritatis? Dolorum, delectus expedita!</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptatum deserunt facere voluptas similique ullam doloremque minus harum praesentium, veritatis vel obcaecati fuga dicta molestias error! Sequi.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, quod.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea sapiente molestias quam iste dolorem non itaque vitae ullam.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque magni beatae, eligendi distinctio. Cum, tempora atque inventore repellat ipsum dolore ipsam maxime mollitia sequi earum odit enim consectetur possimus quasi, iusto deleniti et ad. Consectetur vero reiciendis soluta sint, itaque, repellendus molestias consequatur dolorem iure.</li>
-                </ul>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, fugit, repudiandae. Ad facilis, possimus enim, voluptatum aperiam facere nihil totam!</p>
+              <h2 className="title">Development of social game for smartphone</h2>
+              <div className="cover-img">
+                <img src="//i.huffpost.com/gen/1685103/images/o-SMARTPHONE-GAME-facebook.jpg" alt="cover image" />
               </div>
-              <hr className="flourish" />
+
               <div className="content">
-                <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error.</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et deserunt beatae assumenda saepe dolorem molestiae voluptatem quisquam commodi consequatur tempora. In quisquam rerum repellendus. Cumque architecto atque, maiores necessitatibus. Expedita commodi dolores quos reprehenderit, possimus vel aliquid ducimus ea doloremque nulla beatae harum blanditiis minus officiis eius fuga quod error facilis debitis rem. Sapiente commodi, maiores accusamus earum, animi nihil eos dicta eveniet impedit pariatur eius perspiciatis quis officia quia eligendi ducimus enim possimus nam iusto ipsa itaque sunt rerum quo reiciendis. Tenetur consequuntur quasi numquam omnis perspiciatis laudantium quisquam magnam, labore voluptas, autem ipsam. Consequatur eaque provident molestias doloremque.</p>
-                <blockquote className="right">
-                  Now this is a story all about how my life got flipped - turned upside down. And I'd like to take a minute just sit right there, I'll tell you how I became the prince of a town called Bel-Air.
+                <h3>Coding.</h3>
+                <blockquote className="right">Almost, it turned into a person who implements dynamic UI with JavaScript coding. Grunt used it in a file minifi or some tasks.<br />
+                I hit the wall of object-oriented programming. Currently in progressive form.
                 </blockquote>
-                <p>
-                  <img className="right" src="https://unsplash.it/400/300" alt="image" />Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae consequatur est sit non, laboriosam odit quidem mollitia minus. Doloremque eum, atque sunt. Quisquam, totam. Quidem perspiciatis cumque facere blanditiis aspernatur corrupti ut alias et odio aut at consectetur voluptatibus possimus rerum animi sapiente quibusdam suscipit, id modi ex deserunt omnis ipsum architecto nam. Consequuntur, quam culpa. Nisi quidem accusamus voluptates enim cupiditate ullam adipisci dolorem.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis voluptatem, in ad consequuntur inventore voluptatum excepturi amet corporis vel, sed magnam nulla, id. Quam voluptatem quae ipsa corporis tenetur nisi eius amet sint magnam eligendi. Error sequi distinctio officia quia laborum maiores delectus provident vero, architecto qui cupiditate harum totam ea, facilis quas quae non earum ab eveniet quo nulla quis porro vitae. Rem minus nam quas nesciunt eos sed corporis nostrum neque, quia praesentium aperiam! Consectetur optio magnam ab!</p>
-                <h3>Lorem ipsum dolor sit amet, consectetur adipisicing.</h3>
-                <p><img src="https://unsplash.it/220/400" alt="" className="left" />Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam modi sed minima consequuntur laborum porro doloribus unde alias, eligendi vel voluptas optio ipsum quae!</p>
-                <h4>Lorem ipsum dolor sit amet, consectetur.</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis nihil eaque quaerat, facilis dolorum suscipit, saepe maiores, optio libero dignissimos nam iure. Quaerat itaque, reprehenderit possimus cumque fuga, maxime nihil earum accusantium natus veritatis culpa quisquam optio. Harum, facilis. Quas impedit voluptates quia repellat suscipit officia quis, doloremque, beatae consequatur, quaerat commodi! Necessitatibus dolore, ipsum laudantium aperiam placeat doloribus cum. Itaque a unde totam nam sequi provident accusamus, tenetur impedit temporibus. Rerum velit voluptas eum natus cupiditate quos harum nesciunt.</p>
-                <h4>Lorem ipsum dolor sit amet.</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, illum. Mollitia molestiae recusandae fugit dignissimos quae fugiat necessitatibus aperiam quaerat sapiente, officiis labore ullam rerum ex accusamus ratione assumenda consectetur velit ipsa odit dolorem voluptatibus nihil. Atque sunt, eveniet mollitia repellat deserunt nesciunt repellendus minus! In itaque, rerum voluptatum eum deleniti neque quis harum ipsam enim! Ex ab quas consequatur provident debitis. Facilis dignissimos laboriosam corporis, quam ipsam, sint officiis, sunt nam temporibus magni quae quisquam nihil animi minima ab! Fugiat blanditiis necessitatibus pariatur modi dolorum itaque sunt quibusdam amet quisquam corrupti similique voluptate in, quas fuga veniam harum ex.</p>
-                <blockquote className="full left">
-                  I had a dream I could buy my way to heaven, <br />
-                  when I awoke, I spent that on a necklace <br />
-                  I told God I'd be back in a second; <br />
-                  Man it's so hard not to act reckless.
-                </blockquote>
-                <hr className="flourish" />
-                <h3>Lorem ipsum dolor sit amet, consectetur adipisicing.</h3>
-                <p><img src="https://unsplash.it/1100/500/" alt="cover-image-2" /></p>
-              </div>
-              <div className="content two col">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae nisi reiciendis illo odio soluta iusto eos quo ab numquam error nam aliquid quidem facere aperiam commodi aliquam, non excepturi, repellat expedita in alias quaerat eligendi! Illo omnis ipsam maiores porro eos voluptatum, ea distinctio perferendis:</p>
-                <blockquote className="full right">
-                  1, 2, 3 and to the 4 -
-                  Snoop Doggy Dogg and Dr. Dre is at the door.
-                  Ready to make an entrance so back on up,
-                  'cause you know we're about to rip shit up.
-                </blockquote>
-                <h4>Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
                 <ul>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibus mollitia voluptate!</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis error earum ipsa recusandae, cupiditate magnam.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex quis facilis fuga modi voluptate.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt aliquid quaerat quo voluptatibus excepturi, neque assumenda!</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis reiciendis suscipit dolores deleniti!</li>
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                  <li>JavaScript (jQuery, AngularJS, Grunt)</li>
+                  <li>Java (Velocity)</li>
+                  <li>Sublime Text / Eclipse</li>
+                  <li>Subversion</li>
                 </ul>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo soluta, fugiat sunt cum non aspernatur tempora praesentium exercitationem aliquid magnam.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum itaque laudantium suscipit, id ratione in tempore voluptatum.</p>
+
+                <hr className="flourish" />
+
+                <h3>Output at this time</h3>
+
+                <p>
+                  <img className="right" src="//s-media-cache-ak0.pinimg.com/originals/3d/e3/8c/3de38c1ab9551c4468800f13ea604386.jpg" width="400" height="" alt="image" />
+                  I started writing Qiita. However, I have written almost only this time.
+                </p>
+                <ul>
+                  <li><a href="//qiita.com/hrfmmymt/items/e3ed8138a3218ad2b794" target="_blank" rel="noreferrer noopener">AngularJSのng-optionsで自動生成するoptionタグに任意のvalueをセットする</a></li>
+                  <li><a href="//qiita.com/hrfmmymt/items/350dd409bd82106e752a" target="_blank" rel="noreferrer noopener">オブジェクトの配列でkey/valueの重複したオブジェクトを削除する</a></li>
+                  <li><a href="//qiita.com/hrfmmymt/items/af79e5e3ffacac3765e5" target="_blank" rel="noreferrer noopener">Re: AngularJSで連動するSELECTタグを作る</a></li>
+                  <li><a href="//qiita.com/hrfmmymt/items/59aa2d9921f3432aa130" target="_blank" rel="noreferrer noopener">BrowserSync使って自IPでサーバー立ち上げてwatchしてreloadするgulpfile</a></li>
+                  <li><a href="//qiita.com/hrfmmymt/items/280f140c2682f085e8fa" target="_blank" rel="noreferrer noopener">可変するtextareaの幅に合わせて広がる親div</a></li>
+                </ul>
+
               </div>
             </article>
           </div>
 
-          <ScrollParallax
-            animation={{ rotate: 360 }}
-            style={{ transform: 'rotate(0)' }}
-            className="career__prllx is-rotate"
-          >
-            ぐるぐる
-          </ScrollParallax>
+          <div className="career__wrapper">
+            <aside>
+              { /* wide screen */ }
+              <div className="chapter">
+                <h1>2014</h1>
+              </div>
+            </aside>
 
-          <ScrollParallax
-            animation={{ x: 0, opacity: 1 }}
-            style={{
-              transform: 'translateX(-200px)',
-              opacity: 0,
-              backgroundColor: '#133252',
-              color: '#fff'
-            }}
-            className="career__prllx is-trnsx"
-          >
-            スッ
-          </ScrollParallax>
+            <article>
+              { /* narrow screen */ }
+              <div className="chapter">
+                <h1>2014</h1>
+              </div>
 
-          <ScrollParallax
-            animation={[
-              { opacity: 1, playScale: [0, 0.2] },
-              { blur: '0px', backgroundColor: '#F38EAD', playScale: [0, 0.2] },
-              {
-                translateX: -100,
-                boxShadow: '5px 5px 5px #000',
-                color: '#fff000',
-                playScale: [0, 0.2]
-              },
-              { translateX: 100, playScale: [0, 0.2] },
-              { translateX: 0, playScale: [0, 0.2] }
-            ]}
-            style={{ filter: 'blur(10px)', transform: 'translateX(0px)', opacity: 0, color: '#fff' }}
-            className="career__prllx is-trnsxy"
-          >
-            ヘイヘイ
-          </ScrollParallax>
+              <h2 className="title">Development of advertisement distribution system<br />management screen</h2>
+              <div className="cover-img">
+                <img src="//speckycdn-sdm.netdna-ssl.com/wp-content/uploads/2014/08/mthly_freebies_sept_39.jpg" alt="cover image" />
+              </div>
+
+              <div className="content">
+                <h3>Coding, UI design, code review.</h3>
+                <blockquote className="right">いわゆる管理画面です。FWはAngularJSのAngular-Seedをベースに使用しています。グラフはGoogle Chart Toolsを使用しています。<br />Angular難しいです。</blockquote>
+                <ul>
+                  <li>HTML5</li>
+                  <li>CSS3 (Less、Bootstrap)</li>
+                  <li>JavaScript (AngularJS, Gulp)</li>
+                  <li>Sublime Text / Vim</li>
+                  <li>Git (GitHub)</li>
+                  <li>Redmine</li>
+                </ul>
+
+                <hr className="flourish" />
+
+                <h3>Output at this time</h3>
+
+                <p>
+                  <img className="right" src="//s-media-cache-ak0.pinimg.com/originals/3d/e3/8c/3de38c1ab9551c4468800f13ea604386.jpg" width="400" height="" alt="image" />
+                  I started writing Qiita. However, I have written almost only this time.
+                </p>
+                <ul>
+                  <li><a href="//qiita.com/hrfmmymt/items/e3ed8138a3218ad2b794" target="_blank" rel="noreferrer noopener">AngularJSのng-optionsで自動生成するoptionタグに任意のvalueをセットする</a></li>
+                  <li><a href="//qiita.com/hrfmmymt/items/350dd409bd82106e752a" target="_blank" rel="noreferrer noopener">オブジェクトの配列でkey/valueの重複したオブジェクトを削除する</a></li>
+                  <li><a href="//qiita.com/hrfmmymt/items/af79e5e3ffacac3765e5" target="_blank" rel="noreferrer noopener">Re: AngularJSで連動するSELECTタグを作る</a></li>
+                  <li><a href="//qiita.com/hrfmmymt/items/59aa2d9921f3432aa130" target="_blank" rel="noreferrer noopener">BrowserSync使って自IPでサーバー立ち上げてwatchしてreloadするgulpfile</a></li>
+                  <li><a href="//qiita.com/hrfmmymt/items/280f140c2682f085e8fa" target="_blank" rel="noreferrer noopener">可変するtextareaの幅に合わせて広がる親div</a></li>
+                </ul>
+
+              </div>
+            </article>
+          </div>
+
+          <div className="career__wrapper">
+
+            <aside>
+              { /* wide screen */ }
+              <div className="chapter">
+                <h1>2015</h1>
+              </div>
+            </aside>
+            <article>
+              { /* narrow screen */ }
+              <div className="chapter">
+                <h1>2015</h1>
+              </div>
+
+              <h2 className="title">Development of a ticket reservation site</h2>
+              <div className="cover-img">
+                <img src="//speckycdn-sdm.netdna-ssl.com/wp-content/uploads/2014/08/mthly_freebies_sept_39.jpg" alt="cover image" />
+              </div>
+
+              <div className="content">
+                <h3>Coding, UI design, performance improvement, etc.<br />{'I' + "'" + 'm doing front-end work in general.'}</h3>
+                <blockquote className="right">We performed page coding and refactoring of new and existing services, SEO improvement, performance improvement, A / B test and other related work.</blockquote>
+                <ul>
+                  <li>HTML5</li>
+                  <li>CSS3 (Sass)</li>
+                  <li>JavaScript (jQuery, Babel, Gulp)</li>
+                  <li>PHP (WordPress, CakePHP)</li>
+                  <li>Sublime Text / Vim</li>
+                  <li>Subversion, Git</li>
+                </ul>
+
+                <hr className="flourish" />
+
+                <h3>Output at this time</h3>
+
+                <p>
+                  <img className="right" src="https://unsplash.it/400/300" alt="image" />
+                  There are many
+                </p>
+                <ul>
+                  <li><a href="//hrfmmymt.tumblr.com/post/150112369172/tab-ui-a11y" target="_blank" rel="noreferrer noopener">Tab UI a11y</a></li>
+                  <li><a href="//hrfmmymt.tumblr.com/post/153467874547/backlog-%E3%81%AE%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97%E3%82%A2%E3%83%97%E3%83%AA" target="_blank" rel="noreferrer noopener">Backlog のデスクトップアプリ</a></li>
+                  <li><a href="//hrfmmymt.tumblr.com/post/154415967187/electron-%E4%B8%80%E5%B9%B4%E6%8C%AF%E3%82%8A%E3%81%AE-%E6%89%80%E6%84%9F%E3%81%AA%E3%81%A9" target="_blank" rel="noreferrer noopener">Electron 一年振りの 所感など</a></li>
+                  <li><a href="//hrfmmymt.tumblr.com/post/156709551777/%E6%9F%BF%E9%A3%9F%E3%81%88%E3%81%B0-react-babel-webpack" target="_blank" rel="noreferrer noopener">柿食えば React - Babel - Webpack</a></li>
+                  <li><a href="//hrfmmymt.tumblr.com/post/157476153442/react-%E3%81%A7-wai-aria-%E5%AF%BE%E5%BF%9C%E3%81%AE-modal-dialog-window-%E3%82%92%E5%AE%9F%E8%A3%85%E3%81%97%E3%81%9F" target="_blank" rel="noreferrer noopener">React で WAI-ARIA 対応の modal dialog (window) を実装した</a></li>
+                </ul>
+
+              </div>
+            </article>
+          </div>
+
         </div>
+        {/*
+          /scrll
+        */}
 
         <div
           className="scrll"
