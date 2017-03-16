@@ -109,160 +109,82 @@ export default class Article extends React.Component {
           }}
         >
 
-          <div className="career__wrapper">
-
-            <aside>
-              { /* wide screen */ }
-              <div className="chapter">
-                <h1>2014</h1>
+        <div className="timeline">
+          <ul>
+            <li>
+              <span className="eyebrow">Jan 15th, 2016</span>
+              <h1>Some headline</h1>
+              <p>This is where we would include some awesome sub-text or description text. This is where we would include some awesome sub-text or description text</p>
+              <p>Multiple paragraphs can even be a neat thing we use here.</p>
+            </li>
+            <li>
+              <span className="eyebrow">Jan 15th, 2016</span>
+              <h1>Some headline, with an image</h1>
+              <p>
+                <img src="http://cdn3.vox-cdn.com/thumbor/7VRz3ePD_FUFyQ9FjAWMEyl1LLw=/1600x900/smart/farm8.staticflickr.com/7533/15210464363_28c306612c_k.jpg" />
+              </p>
+              <p>This is where we would include some awesome sub-text or description text</p></li>
+            <li>
+              <span className="eyebrow">Jan 15th, 2016, with a longer title to see how it works when it breaks.</span>
+              <h1>Item One, some headline</h1>
+              <p>This is where we would include some awesome sub-text or description text</p></li>
+            <li>
+              <span className="eyebrow">Jan 15th, 2016</span>
+              <h1>Some headline, with video!</h1>
+              <div className="m-video">
+                <div className="m-video__inner">
+                  <div className="embed">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/-JXfUU7-4JI" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                </div>
               </div>
-            </aside>
-            <article>
-              { /* narrow screen */ }
-              <div className="chapter">
-                <h1>2014</h1>
+              <p>This is where we would include some awesome sub-text or description text</p></li>
+            <li>
+              <span className="eyebrow">Card Test</span>
+              <div className="card">
+                <h1>Some headline, but this particular headline is much longer than the other headlines to text character length.</h1>
+                <p>This is where we would include some awesome sub-text or description text</p>
               </div>
-
-              <h2 className="title">Development of social game for smartphone</h2>
-              <div className="cover-img">
-                <img src="//i.huffpost.com/gen/1685103/images/o-SMARTPHONE-GAME-facebook.jpg" alt="cover image" />
-              </div>
-
-              <div className="content">
-                <h3>Coding.</h3>
-                <blockquote className="right">Almost, it turned into a person who implements dynamic UI with JavaScript coding. Grunt used it in a file minifi or some tasks.<br />
-                I hit the wall of object-oriented programming. Currently in progressive form.
-                </blockquote>
-                <ul>
-                  <li>HTML5</li>
-                  <li>CSS3</li>
-                  <li>JavaScript (jQuery, AngularJS, Grunt)</li>
-                  <li>Java (Velocity)</li>
-                  <li>Sublime Text / Eclipse</li>
-                  <li>Subversion</li>
-                </ul>
-
-                <hr className="flourish" />
-
-                <h3>Output at this time</h3>
-
+            </li>
+            <li>
+              <span className="eyebrow">Jan 15th, 2016</span>
+              <h1>Some headline</h1>
+              <p>This is where we would include some awesome sub-text or description text. This is where we would include some awesome sub-text or description text</p>
+              <p>Multiple paragraphs can even be a neat thing we use here.</p>
+            </li>
+          </ul>
+          <h2 className="break">This is where a section header or timeline breaker would go</h2>
+          <ul>
+            <li>
+              <span className="eyebrow">Card test</span>
+              <div className="card">
+                <h1>Some headline, with an image</h1>
                 <p>
-                  <img className="right" src="//s-media-cache-ak0.pinimg.com/originals/3d/e3/8c/3de38c1ab9551c4468800f13ea604386.jpg" width="400" height="" alt="image" />
-                  I started writing Qiita. However, I have written almost only this time.
+                  <img src="http://cdn3.vox-cdn.com/thumbor/7VRz3ePD_FUFyQ9FjAWMEyl1LLw=/1600x900/smart/farm8.staticflickr.com/7533/15210464363_28c306612c_k.jpg" />
                 </p>
-                <ul>
-                  <li><a href="//qiita.com/hrfmmymt/items/e3ed8138a3218ad2b794" target="_blank" rel="noreferrer noopener">AngularJSのng-optionsで自動生成するoptionタグに任意のvalueをセットする</a></li>
-                  <li><a href="//qiita.com/hrfmmymt/items/350dd409bd82106e752a" target="_blank" rel="noreferrer noopener">オブジェクトの配列でkey/valueの重複したオブジェクトを削除する</a></li>
-                  <li><a href="//qiita.com/hrfmmymt/items/af79e5e3ffacac3765e5" target="_blank" rel="noreferrer noopener">Re: AngularJSで連動するSELECTタグを作る</a></li>
-                  <li><a href="//qiita.com/hrfmmymt/items/59aa2d9921f3432aa130" target="_blank" rel="noreferrer noopener">BrowserSync使って自IPでサーバー立ち上げてwatchしてreloadするgulpfile</a></li>
-                  <li><a href="//qiita.com/hrfmmymt/items/280f140c2682f085e8fa" target="_blank" rel="noreferrer noopener">可変するtextareaの幅に合わせて広がる親div</a></li>
-                </ul>
-
+                <p>This is where we would include some awesome sub-text or description text</p>
               </div>
-            </article>
-          </div>
-
-          <div className="career__wrapper">
-            <aside>
-              { /* wide screen */ }
-              <div className="chapter">
-                <h1>2014</h1>
+            </li>
+            <li>
+              <span className="eyebrow">Jan 15th, 2016, with a longer title to see how it works when it breaks.</span>
+              <h1>Item One, some headline</h1>
+              <p>This is where we would include some awesome sub-text or description text</p></li>
+            <li>
+              <span className="eyebrow">Jan 15th, 2016</span>
+              <h1>Some headline, with video!</h1>
+              <div className="m-video">
+                <div className="m-video__inner">
+                  <div className="embed">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/-JXfUU7-4JI" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                </div>
               </div>
-            </aside>
-
-            <article>
-              { /* narrow screen */ }
-              <div className="chapter">
-                <h1>2014</h1>
-              </div>
-
-              <h2 className="title">Development of advertisement distribution system<br />management screen</h2>
-              <div className="cover-img">
-                <img src="//speckycdn-sdm.netdna-ssl.com/wp-content/uploads/2014/08/mthly_freebies_sept_39.jpg" alt="cover image" />
-              </div>
-
-              <div className="content">
-                <h3>Coding, UI design, code review.</h3>
-                <blockquote className="right">いわゆる管理画面です。FWはAngularJSのAngular-Seedをベースに使用しています。グラフはGoogle Chart Toolsを使用しています。<br />Angular難しいです。</blockquote>
-                <ul>
-                  <li>HTML5</li>
-                  <li>CSS3 (Less、Bootstrap)</li>
-                  <li>JavaScript (AngularJS, Gulp)</li>
-                  <li>Sublime Text / Vim</li>
-                  <li>Git (GitHub)</li>
-                  <li>Redmine</li>
-                </ul>
-
-                <hr className="flourish" />
-
-                <h3>Output at this time</h3>
-
-                <p>
-                  <img className="right" src="//s-media-cache-ak0.pinimg.com/originals/3d/e3/8c/3de38c1ab9551c4468800f13ea604386.jpg" width="400" height="" alt="image" />
-                  I started writing Qiita. However, I have written almost only this time.
-                </p>
-                <ul>
-                  <li><a href="//qiita.com/hrfmmymt/items/e3ed8138a3218ad2b794" target="_blank" rel="noreferrer noopener">AngularJSのng-optionsで自動生成するoptionタグに任意のvalueをセットする</a></li>
-                  <li><a href="//qiita.com/hrfmmymt/items/350dd409bd82106e752a" target="_blank" rel="noreferrer noopener">オブジェクトの配列でkey/valueの重複したオブジェクトを削除する</a></li>
-                  <li><a href="//qiita.com/hrfmmymt/items/af79e5e3ffacac3765e5" target="_blank" rel="noreferrer noopener">Re: AngularJSで連動するSELECTタグを作る</a></li>
-                  <li><a href="//qiita.com/hrfmmymt/items/59aa2d9921f3432aa130" target="_blank" rel="noreferrer noopener">BrowserSync使って自IPでサーバー立ち上げてwatchしてreloadするgulpfile</a></li>
-                  <li><a href="//qiita.com/hrfmmymt/items/280f140c2682f085e8fa" target="_blank" rel="noreferrer noopener">可変するtextareaの幅に合わせて広がる親div</a></li>
-                </ul>
-
-              </div>
-            </article>
-          </div>
-
-          <div className="career__wrapper">
-
-            <aside>
-              { /* wide screen */ }
-              <div className="chapter">
-                <h1>2015</h1>
-              </div>
-            </aside>
-            <article>
-              { /* narrow screen */ }
-              <div className="chapter">
-                <h1>2015</h1>
-              </div>
-
-              <h2 className="title">Development of a ticket reservation site</h2>
-              <div className="cover-img">
-                <img src="//speckycdn-sdm.netdna-ssl.com/wp-content/uploads/2014/08/mthly_freebies_sept_39.jpg" alt="cover image" />
-              </div>
-
-              <div className="content">
-                <h3>Coding, UI design, performance improvement, etc.<br />{'I' + "'" + 'm doing front-end work in general.'}</h3>
-                <blockquote className="right">We performed page coding and refactoring of new and existing services, SEO improvement, performance improvement, A / B test and other related work.</blockquote>
-                <ul>
-                  <li>HTML5</li>
-                  <li>CSS3 (Sass)</li>
-                  <li>JavaScript (jQuery, Babel, Gulp)</li>
-                  <li>PHP (WordPress, CakePHP)</li>
-                  <li>Sublime Text / Vim</li>
-                  <li>Subversion, Git</li>
-                </ul>
-
-                <hr className="flourish" />
-
-                <h3>Output at this time</h3>
-
-                <p>
-                  <img className="right" src="https://unsplash.it/400/300" alt="image" />
-                  There are many
-                </p>
-                <ul>
-                  <li><a href="//hrfmmymt.tumblr.com/post/150112369172/tab-ui-a11y" target="_blank" rel="noreferrer noopener">Tab UI a11y</a></li>
-                  <li><a href="//hrfmmymt.tumblr.com/post/153467874547/backlog-%E3%81%AE%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97%E3%82%A2%E3%83%97%E3%83%AA" target="_blank" rel="noreferrer noopener">Backlog のデスクトップアプリ</a></li>
-                  <li><a href="//hrfmmymt.tumblr.com/post/154415967187/electron-%E4%B8%80%E5%B9%B4%E6%8C%AF%E3%82%8A%E3%81%AE-%E6%89%80%E6%84%9F%E3%81%AA%E3%81%A9" target="_blank" rel="noreferrer noopener">Electron 一年振りの 所感など</a></li>
-                  <li><a href="//hrfmmymt.tumblr.com/post/156709551777/%E6%9F%BF%E9%A3%9F%E3%81%88%E3%81%B0-react-babel-webpack" target="_blank" rel="noreferrer noopener">柿食えば React - Babel - Webpack</a></li>
-                  <li><a href="//hrfmmymt.tumblr.com/post/157476153442/react-%E3%81%A7-wai-aria-%E5%AF%BE%E5%BF%9C%E3%81%AE-modal-dialog-window-%E3%82%92%E5%AE%9F%E8%A3%85%E3%81%97%E3%81%9F" target="_blank" rel="noreferrer noopener">React で WAI-ARIA 対応の modal dialog (window) を実装した</a></li>
-                </ul>
-
-              </div>
-            </article>
-          </div>
+              <p>This is where we would include some awesome sub-text or description text</p></li>
+            <li>
+              <span className="eyebrow">Jan 15th, 2016 — 3:04pm</span>
+              <h1>Some headline, but this particular headline is much longer than the other headlines to text character length.</h1><p>This is where we would include some awesome sub-text or description text</p></li>
+          </ul>
+        </div>
 
         </div>
         {/*
