@@ -46,8 +46,7 @@ module.exports = [
               browsers: ['last 2 versions']
             }),
             require('postcss-custom-properties')(),
-            require('postcss-nested')(),
-            require('postcss-sorting')()
+            require('postcss-nested')()
           ]
         }
       })
@@ -105,8 +104,7 @@ module.exports = [
               browsers: ['last 2 versions']
             }),
             require('postcss-custom-properties')(),
-            require('postcss-nested')(),
-            require('postcss-sorting')()
+            require('postcss-nested')()
           ]
         }
       })

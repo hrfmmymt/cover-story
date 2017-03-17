@@ -1,7 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const LicenseWebpackPlugin = require('license-webpack-plugin')
 const extractCSS = new ExtractTextPlugin('styles.css')
 
 module.exports = [
@@ -47,27 +46,9 @@ module.exports = [
               browsers: ['last 2 versions']
             }),
             require('postcss-custom-properties')(),
-            require('postcss-nested')(),
-            require('postcss-sorting')()
+            require('postcss-nested')()
           ]
         }
-      }),
-      new webpack.DefinePlugin({
-        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-      }),
-      new webpack.optimize.UglifyJsPlugin({
-        minimize: true,
-        sourceMap: false,
-        compressor: {
-          warnings: false
-        },
-        output: {
-          comments: false
-        }
-      }),
-      new LicenseWebpackPlugin({
-        pattern: /^(.*)$/,
-        filename: 'licenses.txt'
       })
     ]
   },
@@ -123,27 +104,9 @@ module.exports = [
               browsers: ['last 2 versions']
             }),
             require('postcss-custom-properties')(),
-            require('postcss-nested')(),
-            require('postcss-sorting')()
+            require('postcss-nested')()
           ]
         }
-      }),
-      new webpack.DefinePlugin({
-        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-      }),
-      new webpack.optimize.UglifyJsPlugin({
-        minimize: true,
-        sourceMap: false,
-        compressor: {
-          warnings: false
-        },
-        output: {
-          comments: false
-        }
-      }),
-      new LicenseWebpackPlugin({
-        pattern: /^(.*)$/,
-        filename: 'licenses.txt'
       })
     ]
   }

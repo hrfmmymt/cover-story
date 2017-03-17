@@ -1,2 +1,5 @@
 export App from './app'
-export Article from './article'
+export Home from './home'
+export Career from './career'
+export Career1 from './career_1'
+export About from './about'

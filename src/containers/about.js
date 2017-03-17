@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import * as meta from '../actions/meta'
 
 // component
-import Article from '../components/article'
+import About from '../components/about'
 
 // state to props
 const mapStateToProps = (state, ownProps) => {
@@ -26,14 +26,14 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 // fetchData function on access at server
-Article.fetchData = (dispatch) => {
+About.fetchData = (dispatch) => {
   return dispatch({
     type: 'META-SET',
     meta: {
-      title: 'Article Container fetchData',
-      description: 'This is write by /src/containers/article.js fetchData',
-      img: 'article_container.jpg',
-      url: '/src/containers/article.js'
+      title: 'About Container fetchData',
+      description: '/src/containers/about.js fetchData',
+      img: 'about_container.jpeg',
+      url: '/src/containers/about.js'
     }
   })
 }
@@ -41,4 +41,4 @@ Article.fetchData = (dispatch) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Article)
+)(About)

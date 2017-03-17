@@ -4,10 +4,9 @@ import { connect } from 'react-redux'
 
 // actions
 import * as meta from '../actions/meta'
-import {didMount} from '../actions/didmount'
 
 // component
-import App from '../components/app'
+import Career1 from '../components/career_1'
 
 // state to props
 const mapStateToProps = (state, ownProps) => {
@@ -21,20 +20,20 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     actions: {
-      didMount: bindActionCreators(didMount, dispatch)
+      meta: bindActionCreators({...meta}, dispatch)
     }
   }
 }
 
 // fetchData function on access at server
-App.fetchData = (dispatch) => {
+Career1.fetchData = (dispatch) => {
   return dispatch({
     type: 'META-SET',
     meta: {
-      title: 'App Container fetchData',
-      description: '/src/containers/app.js fetchData',
-      img: 'app_container.jpeg',
-      url: '/src/containers/app.js'
+      title: 'Career_1 Container fetchData',
+      description: '/src/containers/career_1.js fetchData',
+      img: 'career_1_container.jpeg',
+      url: '/src/containers/career_1.js'
     }
   })
 }
@@ -42,4 +41,4 @@ App.fetchData = (dispatch) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(App)
+)(Career1)

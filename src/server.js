@@ -70,7 +70,7 @@ const HTML = ({ content, meta, store }) => (
   <html>
     <head>
       <meta charSet="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
       <title>{meta.title}</title>
       <link rel="stylesheet" href="/styles.css" />
 
@@ -92,8 +92,14 @@ const HTML = ({ content, meta, store }) => (
   </html>
 )
 
+HTML.propTypes = {
+  content: React.PropTypes.string.isRequired,
+  meta: React.PropTypes.object.isRequired,
+  store: React.PropTypes.object.isRequired
+}
+
 const port = process.env.PORT || 8080
 
 app.listen(port, function() {
-  console.log('App is running on port ' + port)
+  console.log('App is running on port ' + port + ', Ctrl+C to stop')
 })
