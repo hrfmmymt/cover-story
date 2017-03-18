@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import * as meta from '../actions/meta'
 
 // component
-import Career1 from '../components/career_1'
+import CareerDetail from '../components/career_detail'
 
 // state to props
 const mapStateToProps = (state, ownProps) => {
@@ -26,14 +26,14 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 // fetchData function on access at server
-Career1.fetchData = (dispatch) => {
+CareerDetail.fetchData = (dispatch) => {
   return dispatch({
     type: 'META-SET',
     meta: {
-      title: 'Career_1 Container fetchData',
-      description: '/src/containers/career_1.js fetchData',
-      img: 'career_1_container.jpeg',
-      url: '/src/containers/career_1.js'
+      title: 'CareerDetail Container fetchData',
+      description: '/src/containers/career_detail.js fetchData',
+      img: 'career_detail_container.jpeg',
+      url: '/src/containers/career_detail.js'
     }
   })
 }
@@ -41,4 +41,4 @@ Career1.fetchData = (dispatch) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Career1)
+)(CareerDetail)

@@ -62,7 +62,7 @@ export default class App extends React.Component {
 }
 
 App.propTypes = {
-  actions: React.PropTypes.object.isRequired,
-  meta: React.PropTypes.object.isRequired,
-  children: React.PropTypes.object.isRequired
+  actions: React.PropTypes.object,
+  meta: React.PropTypes.object,
+  children: React.PropTypes.object
 }

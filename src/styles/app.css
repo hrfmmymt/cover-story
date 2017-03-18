@@ -196,3 +196,13 @@ a {
     width: 100vw;
   }
 }
+
+.career__detail {
+  height: 100vh;
+  z-index: 9999;
+  position: absolute;
+  background: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+}

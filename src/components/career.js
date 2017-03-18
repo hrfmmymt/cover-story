@@ -66,7 +66,7 @@ export default class Career extends React.Component {
 
           <div className="timeline">
 
-            <Link to="/career/career_1">
+            <Link to="/career/skyticket">
               <div className="entry">
                 <div className="title">
                   <h3><time>2015.10</time></h3>
@@ -77,14 +77,16 @@ export default class Career extends React.Component {
               </div>
             </Link>
 
-            <div className="entry">
-              <div className="title">
-                <h3><time>2015.10</time></h3>
+            <Link to="/career/kauli">
+              <div className="entry">
+                <div className="title">
+                  <h3><time>2015.10</time></h3>
+                </div>
+                <div className="body">
+                  <h4>Development of a ticket reservation site</h4>
+                </div>
               </div>
-              <div className="body">
-                <h4>Development of a ticket reservation site</h4>
-              </div>
-            </div>
+            </Link>
 
             <div className="entry">
               <div className="title">
