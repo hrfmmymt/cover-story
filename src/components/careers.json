@@ -1,0 +1,4 @@
+[
+  {"name": "kauli", "sub": "広告配信システム管理画面開発", "overview": "コーディング、UI設計、コードレビューを行いました。", "langs": ["HTML5", "CSS3 (Less、Bootstrap)", "JavaScript (AngularJS、gulp)"], "tools": ["Sublime Text", "Vim", "Git (GitHub)", "Redmine"], "notes": "いわゆる管理画面です。FWはAngularJSのAngular-Seedをベースに使用しています。グラフはGoogle Chart Toolsを使用しています。Angular難しいです。"},
+  {"name": "skyticket", "sub": "航空券予約サイト開発", "overview": "コーディング、UI設計、パフォーマンス改善などフロントエンド作業全般を行っています。", "langs": ["HTML5", "CSS3 (Sass、Compass、LESS)", "JavaScript (jQuery, Babel、gulp)", "PHP (WordPress、CakePHP)"], "tools": ["Sublime Text", "Vim", "Subversion", "Git"], "notes": "新規サービス・ページコーディング、既存コードのリファクタリング、SEO改善、パフォーマンス改善、A / B テストその他関連作業などを行いました。"}
+]
