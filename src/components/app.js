@@ -8,7 +8,7 @@ export default class App extends React.Component {
     const resizeBanner = () => {
       const coverHeight = window.innerHeight * 0.80
       document.getElementById('header').setAttribute('style', 'height: ' + Math.floor(coverHeight) + 'px;')
-      document.body.setAttribute('style', 'min-height: ' + Math.floor(coverHeight * 2) + 'px;')
+    //   document.body.setAttribute('style', 'min-height: ' + Math.floor(coverHeight * 2) + 'px;')
     }
     window.onresize = () => {
       if (window.innerWidth < 768) return

@@ -4,13 +4,30 @@ import careers from './careers.json'
 
 class CareerDetailItem extends React.Component {
   render() {
+    const langs = []
+    const langsList = this.props.data.langs
+    for (const i in langsList) {
+      langs.push(<li key={ langsList[i] }>{ langsList[i] }</li>)
+    }
+
+    const tools = []
+    const toolsList = this.props.data.tools
+    for (const i in toolsList) {
+      tools.push(<li key={ toolsList[i] }>{ toolsList[i] }</li>)
+    }
+
     return (
       <article>
-        <h2>{ this.props.data.name }</h2>
-        <p>{ this.props.data.sub }</p>
-        <p>{ this.props.data.overview }</p>
-        <p>{ this.props.data.langs }</p>
-        <p>{ this.props.data.tools }</p>
+        <h2>{ this.props.data.sub }</h2>
+        <p className="career__detail__texts">{ this.props.data.overview }</p>
+        <p>Langs: </p>
+        <ul>
+          {langs}
+        </ul>
+        <p>Tools: </p>
+        <ul>
+          {tools}
+        </ul>
         <p>{ this.props.data.notes }</p>
       </article>
     )
@@ -51,22 +68,19 @@ export default class CareerDetail extends React.Component {
 
   render() {
     return (
-      <div className={'career__detail is-' + this.props.params.name }>
-        <article>
-          {
-            this.state.careers.map(career => {
-              return (
-                <CareerDetailItem key={ career } data={ career } />
-              )
-            })
-          }
-        </article>
+      <div className={'career__detail ' + this.props.params.name }>
+        {
+          this.state.careers.map(career => {
+            return (
+              <CareerDetailItem key={ career } data={ career } />
+            )
+          })
+        }
         <div className="backButton">
           <button
             type="button"
             onClick={ browserHistory.goBack }
           >
-          Back
           </button>
         </div>
       </div>
