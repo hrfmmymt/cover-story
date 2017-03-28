@@ -19,6 +19,9 @@ class CareerDetailItem extends React.Component {
     return (
       <article>
         <h2>{ this.props.data.sub }</h2>
+        <div className="career__dtail__started started">
+          <p>{ this.props.data.started_at }</p>
+        </div>
         <p className="career__detail__texts">{ this.props.data.overview }</p>
         <p>Langs: </p>
         <ul>
@@ -64,6 +67,12 @@ export default class CareerDetail extends React.Component {
     this.setState({
       careers: thisCareers
     })
+
+    if (this.props.params.name === 'kl-vg') {
+      const div = '<div class="hero"></div>'
+      const parent = document.querySelector('.career__detail')
+      parent.innerHTML = div
+    }
   }
 
   render() {
